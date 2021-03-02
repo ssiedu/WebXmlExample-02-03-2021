@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+
+    <context-param>
+        <param-name>company</param-name>
+        <param-value>SSI Digital Academy Limited</param-value> 
+    </context-param>
+    <context-param>
+        <param-name>phone</param-name>
+        <param-value>0731-4545223</param-value>
+    </context-param>
+
+
+    <servlet>
+        <servlet-name>Demo</servlet-name>
+        <servlet-class>Demo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Test</servlet-name>
+        <servlet-class>Test</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Sample</servlet-name>
+        <servlet-class>Sample</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BatchInfo</servlet-name>
+        <servlet-class>BatchInfo</servlet-class>
+        <init-param>
+            <param-name>subject</param-name>
+            <param-value>Linux</param-value>
+        </init-param>
+        <init-param>
+            <param-name>sdate</param-name>
+            <param-value>10-Mar-2021</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>OfficeInfo</servlet-name>
+        <servlet-class>OfficeInfo</servlet-class>
+        <init-param>
+            <param-name>address</param-name>
+            <param-value>154, Bhanwarkua, Indore</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Demo</servlet-name>
+        <url-pattern>/Welcome</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Test</servlet-name>
+        <url-pattern>/Hello</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Sample</servlet-name>
+        <url-pattern>/Sample</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BatchInfo</servlet-name>
+        <url-pattern>/BatchInfo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OfficeInfo</servlet-name>
+        <url-pattern>/OfficeInfo</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
